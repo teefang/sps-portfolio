@@ -1,9 +1,186 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+#heading {
+    width:100%;
+}
+#intro {
+    width: 100%;
+    height: 85%;
+    background-size: 97%;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    margin-left: 35px;
+    background-attachment: scroll;
+    padding-block-end: 200px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 30%;
+}
+.column2{
+    float: left;
+    width: 40%;
+    padding: 40px
+}
+#selfie {
+    margin-left: 5%;
+    max-width: 90%;
+    max-height: 100%;
+    margin-top: 20px;
+}
+h1{
+    font-size: 3em;
+    color: whitesmoke;
+}
+p{
+    color: whitesmoke;
+    font: icon;
+    font-size: 1em;
+}
+#down{
+    margin-block-start: 8%;
+    text-align: center;
+}
+#godown{
+    width:10em;
+    height: 5em;
 }
 
-#greeting-container {
-  margin-top: 20px;
+html{
+    scroll-behavior: smooth;
+}
+.material-icons.md-80 { 
+    font-size: 150px; 
+    color:white;
+}
+.material-icons.md-80:hover{
+    color: black;
+    font-size:150px;
+}
+.categories{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/curves.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 25px;
+    text-align: center;
+    justify-content: center;
+    line-height: 130px;
+}
+ul.icons{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul.icons li{
+    position: relative;
+    display: block;
+    font-size: 80px;
+    background: whitesmoke;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin: 0 60px;
+    cursor: pointer;
+}
+ul.icons li:before{
+  position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background: black;
+    border-radius: 50%;
+    transform: scale(0.9);
+    z-index: -1;
+}
+ul.icons li:hover:before{
+    transform: scale(1.05);
+    filter: blur(3px);
+    box-shadow: 0 0 15px gray;
+}
+ul.icons li:hover{
+    color: black;
+    box-shadow: 0 0 15px #4267B2;
+    text-shadow: 0 0 15px #4267B2;
+}
+.icons{
+    padding-top: 130px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+span{
+    font-size: 15px;
+    font-family: 'Cutive Mono', monospace;
+    line-height: 30px;
+    width: 150px;
+    display: list-item;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.col{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+.csList{
+    display:list-item;
+}
+ul.five{
+    display: flex;
+    margin: 0;
+}
+ul.five li{
+    margin: 0 10px;
+}
+.col1{
+    width: 15%;
+    float: left;
+    line-height: 0;
+}
+.col2{
+    width: 50%;
+    padding-top: 10px;
+    float: left;
+}
+.lang{
+    font-size: 20px;
+    color: black;
+    font:inherit;
+}
+ul.courses{
+    display: list-item;
+}
+.artcolumn{
+    width: 25%;
+    float: left;
+}
+.artCol{
+    width: 30%;
+    float: left;
+    
+}
+.artCat{
+    margin: 0 100px;
+    transition: transform .2s;
+    width: 280px;
+}
+.artCat:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+#artIntro{
+    font-size: 1em; 
+    text-align: center;
+    color: black;
 }

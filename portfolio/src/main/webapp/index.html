@@ -2,17 +2,59 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Tiffany's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
+    <!-- <div id="content">
+      <h1>Tiffany's Portfolio</h1>
       <p>This is my portfolio.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
+    </div>  -->
+    
+    <img id = "heading" src = "/images/head.jpg"> </img>
+    <div id="intro" style="background-image: url('/images/background.jpg')">
+        <div class="row">
+            <div class="column">
+                <img id="selfie" src="/images/picture.png">
+            </div>
+            <div class="column2">
+                <h1>My Portfolio</h1>
+                <p>Hello! My name is Tiffany Fang. 
+                    I am an undergraduate student at University of Michigan 
+                    majoring in Computer Science and minoring in Art& Design. 
+                </p>
+                <div id = "down">
+                    <a href="#cat"><i class="material-icons md-80">keyboard_arrow_down</i></a>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id = "cat" class = "categories" >
+        <ul class = "icons">
+            <li><a href = "cs.html"> <i class="fa fa-laptop" style = "color:black"></i><span>Computer Science</span></a></li>
+            <li><a href = "art.html"><i class="fa fa-paint-brush" style = "color:black"></i><span>Art& Design</span></a></li>
+            <li><i class="fa fa-code" style = "color:black"></i><span>code?</span></li>
+        </ul>
+    </div>
+    
+    <div id="contact">
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://github.com/teefang" class="fa fa-github"> </a></li>
+                    <li><a href="https://www.linkedin.com/in/tiffany-fang-51285818a/" 	class="fa fa-linkedin">	</a></li>
+                    <li><a href="mailto:teefang@umich.edu" class="fa fa-envelope-o">	</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
   </body>
 </html>

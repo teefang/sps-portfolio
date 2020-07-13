@@ -26,10 +26,19 @@
 //   const greetingContainer = document.getElementById('greeting-container');
 //   greetingContainer.innerText = greeting;
 // }
-async function getData() {
-  const response = await fetch('/data');
-  const data = await response.text();
-  document.getElementById('container').innerText = data;
+function getData() {
+  fetch('/data').then(response => response.json()).then((data) => {
+      const commentList = document.getElementById('container');
+      commentList.innerHTML = '';
+      commentList.appendChild(createListElement(data[0]));
+      commentList.appendChild(createListElement(data[1]));
+      commentList.appendChild(createListElement(data[2]));
+  });
+}
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
 
 window.onload = function() {

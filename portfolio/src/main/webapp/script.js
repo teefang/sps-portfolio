@@ -26,6 +26,12 @@
 //   const greetingContainer = document.getElementById('greeting-container');
 //   greetingContainer.innerText = greeting;
 // }
+async function getData() {
+  const response = await fetch('/data');
+  const data = await response.text();
+  document.getElementById('container').innerText = data;
+}
+
 window.onload = function() {
     var modal = document.getElementById("myModal");
     var modal_img = document.getElementById("img");

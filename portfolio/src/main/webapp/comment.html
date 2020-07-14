@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tiffany Fang</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body style="background: #E6D5C9; margin:0"  onload="getComment();">
+      <a href = "index.html"><img id = "heading" src = "/images/head.jpg"> </img></a>
+      <div style="margin: 10em">
+        <h1> Leave a Comment!
+        <form action="/data" method="POST">
+            <textarea name = "input" style="width: 30em;height: 10em"></textarea>
+            <input type="submit"/>
+            <br><br>
+            <p style = "color: black; font-size:30px">Comments:</p>
+            <div id="container" style = "color: black; font-size:20px"></div>
+        </form>
+      </div>
+  </body>
+</html>

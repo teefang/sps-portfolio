@@ -12,35 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-// function addRandomGreeting() {
-//   const greetings =
-//       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-//   // Pick a random greeting.
-//   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-//   // Add it to the page.
-//   const greetingContainer = document.getElementById('greeting-container');
-//   greetingContainer.innerText = greeting;
-// }
-function getData() {
-  fetch('/data').then(response => response.json()).then((data) => {
+function getComment() {
+  fetch('/data').then(response => response.json()).then((comment) => {
       const commentList = document.getElementById('container');
       commentList.innerHTML = '';
-      commentList.appendChild(createListElement(data[0]));
-      commentList.appendChild(createListElement(data[1]));
-      commentList.appendChild(createListElement(data[2]));
+      for(let i in comment){
+          commentList.appendChild(WrapWithListFormat(comment[i]));
+      }
   });
 }
-function createListElement(text) {
+function WrapWithListFormat(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
 }
-
 window.onload = function() {
     var modal = document.getElementById("myModal");
     var modal_img = document.getElementById("img");
@@ -142,4 +127,3 @@ window.onload = function() {
         modal.style.display= "none";
     }
 }
-

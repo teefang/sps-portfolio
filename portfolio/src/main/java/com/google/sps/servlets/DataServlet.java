@@ -25,22 +25,29 @@ import com.google.gson.Gson;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    ArrayList<String> comments = new ArrayList<String>();
-    comments.add("hello");
-    comments.add("bye");
-    comments.add("great!");
-
-    String json = convertToJsonUsingGson(comments);
-
-    response.setContentType("application/json;");
-    response.getWriter().println(json);
-  }
-  private String convertToJsonUsingGson(ArrayList comments) {
-    Gson gson = new Gson();
-    String json = gson.toJson(comments);
-    return json;
+    private ArrayList<String> comments = new ArrayList<String>();
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String json = convertToJsonUsingGson(comments);
+        response.setContentType("application/json;");
+        response.getWriter().println(json);
+    }
+    private String convertToJsonUsingGson(ArrayList<String> comments) {
+        Gson gson = new Gson();
+        String json = gson.toJson(comments);
+        return json;
+    }
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String text = getParameter(request, "input", "");
+        comments.add(text);
+        response.sendRedirect("/index.html");
+    }
+    private String getParameter(HttpServletRequest request, String name, String defaultValue) {
+        String value = request.getParameter(name);
+        if (value == null) {
+            return defaultValue;
+        }
+        return value;
   }
 }

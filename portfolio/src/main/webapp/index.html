@@ -9,14 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <!-- <div id="content">
-      <h1>Tiffany's Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>  -->
+  <body onload="getComment();">
     
     <a href = "index.html"><img id = "heading" src = "/images/head.jpg"> </img></a>
     <div id="intro" style="background-image: url('/images/background.jpg')">
@@ -56,8 +49,11 @@
             </ul>
             <p style="font-family: 'Cutive Mono', monospace"> Feel free to contact me on any of these platforms!</p>
         </footer>
-        <button onclick="getData()">get Data!</button>
-        <div id="container"></div>
+        <form action="/data" method="POST">
+            <textarea name = "input"></textarea>
+            <input type="submit"/>
+            <div id="container"></div>
+        </form>
     </div>
 
   </body>

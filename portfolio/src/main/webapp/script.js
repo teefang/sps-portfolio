@@ -17,7 +17,7 @@ function getComment() {
       const commentList = document.getElementById('container');
       commentList.innerHTML = '';
       for(let i in comment){
-          commentList.appendChild(WrapWithListFormat(comment[i]));
+          commentList.appendChild(WrapWithListFormat(comment[i].message));
       }
   });
 }

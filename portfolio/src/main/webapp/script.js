@@ -21,11 +21,13 @@ function getComment() {
       }
   });
 }
+
 function WrapWithListFormat(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
 }
+
 window.onload = function() {
     var modal = document.getElementById("myModal");
     var modal_img = document.getElementById("img");
@@ -46,6 +48,7 @@ window.onload = function() {
     var image15 = document.getElementById("15");
 
     var description = document.getElementById("caption");
+
     image.onclick = function(){
         modal.style.display = "block";
         modal_img.src = this.src;

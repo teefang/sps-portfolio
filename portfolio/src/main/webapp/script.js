@@ -16,16 +16,16 @@ function getComment() {
   fetch('/data').then(response => response.json()).then((comment) => {
       const commentList = document.getElementById('container');
       commentList.innerHTML = '';
-      for(let i in comment){
-          commentList.appendChild(WrapWithListFormat(comment[i].message));
+      for (let i in comment) {
+        commentList.appendChild(WrapWithListFormat(comment[i].message));
       }
   });
 }
 
 function WrapWithListFormat(text) {
-    const liElement = document.createElement('li');
-    liElement.innerText = text;
-    return liElement;
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
 
 window.onload = function() {

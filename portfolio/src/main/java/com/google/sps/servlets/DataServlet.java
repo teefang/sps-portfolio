@@ -33,9 +33,9 @@ class Comment {
   String message;
   long timestamp;
 
-  Comment(String messageIn, long timestampIn){
-      message = messageIn;
-      timestamp = timestampIn;
+  Comment(String message, long timestamp){
+    this.message = message;
+    this.timestamp = timestamp;
   }
 }
 

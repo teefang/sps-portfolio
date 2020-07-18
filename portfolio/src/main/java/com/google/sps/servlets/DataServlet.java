@@ -28,21 +28,24 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.blobstore.BlobstoreService;
+import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 
-class Comment {
-  String message;
-  long timestamp;
-
-  Comment(String message, long timestamp){
-    this.message = message;
-    this.timestamp = timestamp;
-  }
-}
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    
+  
+  private class Comment {
+    private String message;
+    private long timestamp;
+
+    private Comment(String message, long timestamp){
+      this.message = message;
+      this.timestamp = timestamp;
+    }
+  }
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
       List<Comment> commentList = new ArrayList<>();

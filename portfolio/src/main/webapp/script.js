@@ -17,7 +17,14 @@ function getComment() {
     const commentList = document.getElementById('container');
     commentList.innerHTML = '';
     for (let i in comment) {
-      commentList.appendChild(WrapWithListFormat(comment[i].message));
+      if(comment[i].imgUrl != null){
+        var imageBox = document.createElement('img');
+        imageBox.src = comment[i].imgUrl;
+        commentList.appendChild(imageBox);
+      }
+      if(comment[i].message != null){
+        commentList.appendChild(WrapWithListFormat(comment[i].message));
+      }
     }
   });
 }
@@ -26,6 +33,18 @@ function WrapWithListFormat(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
+}
+
+function fetchBlobstoreUrlAndShowForm() {
+  fetch('/blobstore-upload-url')
+    .then((response) => {
+      return response.text();
+    })
+    .then((imageUploadUrl) => {
+      const messageForm = document.getElementById('my-form');
+      messageForm.action = imageUploadUrl;
+      messageForm.classList.remove('hidden');
+    });
 }
 
 window.onload = function() {
@@ -45,6 +64,6 @@ window.onload = function() {
 
   var close = document.getElementsByClassName("close")[0];
   close.onclick = function() {
-    modal.style.display= "none";
+  modal.style.display= "none";
   }
 }

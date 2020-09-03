@@ -52,7 +52,7 @@ public class DataServlet extends HttpServlet {
 
     private Comment(String message, long timestamp, String imgUrl){
       this.message = message;
-      this.timestamp = timestamp;
+      //this.timestamp = timestamp;
       this.imgUrl = imgUrl;
     }
   }
@@ -88,6 +88,8 @@ public class DataServlet extends HttpServlet {
     String message = getParameter(request, "input", "");
     long timestamp = System.currentTimeMillis();
     String imgUrl = getUploadedFileUrl(request, "img_input");
+
+
 
     Entity messageEntity = new Entity("comment");
     messageEntity.setProperty("message", message);

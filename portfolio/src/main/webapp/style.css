@@ -1,13 +1,36 @@
-#heading {
-    width:100%;
+.fixed-top {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.navigation{
+    box-shadow: 0px 0px 10px 0px grey;
+    padding: 10px;
+    background-color: white;
+}
+.navbar-brand{
+    font-family: 'Cutive Mono';
+    color: black;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    font-size: 1.5em;
+}
+ul.navbar-nav{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
 }
 #intro {
+    padding: 100px;
     width: 100%;
     height: 85%;
     background-size: 97%;
     background-repeat: no-repeat;
-    margin-top: 25px;
-    margin-left: 35px;
     background-attachment: scroll;
     padding-block-end: 200px;
 }
@@ -33,18 +56,17 @@
 }
 h1{
     font-size: 3em;
-    color: whitesmoke;
+    /* color: whitesmoke; */
 }
 p{
-    color: whitesmoke;;
+    /* color: whitesmoke;; */
     font-size: 1em;
 }
 #down{
-    margin-block-start: 8%;
     text-align: center;
 }
 #godown{
-    width:10em;
+    width: 10em;
     height: 5em;
 }
 
@@ -53,7 +75,7 @@ html{
 }
 .material-icons.md-80 { 
     font-size: 150px; 
-    color:white;
+    color: grey;
 }
 .material-icons.md-80:hover{
     color: black;
@@ -132,6 +154,9 @@ a{
     float: left;
     text-align: left;
 }
+.csHeading{
+    font-family: 'Roboto Mono', monospace;
+}
 .csList{
     display:list-item;
 }
@@ -157,8 +182,9 @@ ul.five li{
     color: black;
     font:inherit;
 }
-ul.courses{
+ul.cs{
     display: list-item;
+    font-family: 'Cutive Mono';
 }
 .artcolumn{
     width: 25%;
@@ -238,14 +264,14 @@ ul.courses{
 }
 .artTitle{
     text-align:center; 
-    margin-top: 5em; 
+    /* margin-top: 5em;  */
     color: black;
     font-family: 'Space Mono', monospace;
 
 }
 #contact{
-    margin-top: 10em;
-    background: #67AA;
+    margin-top: 25em;
+    background:rgba(255,227,227,0.5);
     width: 100%;
     height: 400px;
     text-align: center;

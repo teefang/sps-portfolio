@@ -48,4 +48,5 @@ public class QueryServlet extends HttpServlet {
     response.setContentType("application/json");
     response.getWriter().println(jsonResponse);
   }
+  
 }

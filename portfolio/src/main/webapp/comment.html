@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   </head>
-  <body style="background: #E6D5C9; margin:0"  onload="getComment(); fetchBlobstoreUrlAndShowForm();">
-      <a href = "index.html"><img id = "heading" src = "/images/head.jpg"> </img></a>
+  <body style = "background-image: url('/images/brick.jpeg')"  onload="getComment(); fetchBlobstoreUrlAndShowForm();">
+     <div class = "nav">
+        <nav class="navigation fixed-top">
+            <a href="index.html" class="navbar-brand">Tiffany Fang</a>
+        </nav>
+    </div>
       <div style="margin: 10em">
         <h1> Leave a Comment!
         <form id="my-form" class="hidden" method="POST" enctype="multipart/form-data">
@@ -25,5 +30,16 @@
         <p style = "color: black; font-size:30px">Comments:</p>
         <div id="container" style = "color: black; font-size:20px"></div>
       </div>
+      <div id="contact">
+        <footer id="footer">
+            <p style="padding-top:5em; font-family: 'Cutive Mono', monospace">Contact Me:</p>
+            <ul class="social">
+                <li><a id = "github" href="https://github.com/teefang" class="fa fa-github"> </a></li>
+                <li><a id = "linkedin" href="https://www.linkedin.com/in/tiffany-fang-51285818a/" 	class="fa fa-linkedin">	</a></li>
+                <li><a id = "email" href="mailto:teefang@umich.edu" class="fa fa-envelope-o"> </a></li>
+            </ul>
+            <p style="font-family: 'Cutive Mono', monospace"> Feel free to contact me on any of these platforms!</p>
+        </footer>
+    </div>
   </body>
 </html>

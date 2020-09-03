@@ -5,18 +5,25 @@
     <title>Tiffany's Porfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
   </head>
-  <body style="background: #E6D5C9; margin:0">
-      <a href = "index.html"><img id = "heading" src = "/images/head.jpg"> </img></a>
-      <div style="margin: 3em 0 0 8em">
+  <body style = "background-image: url('/images/brick.jpeg')";>
+      <div class = "nav">
+        <nav class="navigation fixed-top">
+            <a href="index.html" class="navbar-brand">Tiffany Fang</a>
+        </nav>
+      </div>
+      <div style="padding: 100px">
         <div class= "row">
             <div class = "col" style="width: 40%; margin-left: 40px">
                 <h1 class = "csHeading">Languages</h1>
-                    <div class="row">
-                        <div class= "col1">
-                            <p class = "lang">C/C++</p>
-                        </div>
-                        <div class= "col2">
+                    <ul class="cs">
+                        <li class = "lang">C/C++</li>
+                        <li class = "lang">Java</li>
+                        <li class = "lang">Python</li>
+                        <li class = "lang">HTML/CSS</li>
+                        <!-- <div class= "col2">
                             <ul class = "five">
                                 <li><i class= "fa fa-circle"></i></li>
                                 <li><i class= "fa fa-circle"></i></li>
@@ -24,86 +31,42 @@
                                 <li><i class= "fa fa-circle"></i></li>
                                 <li><i class= "fa fa-circle"></i></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class= "col1">
-                            <p class = "lang">Python</p>
-                        </div>
-                        <div class= "col2">
-                            <ul class = "five">
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle-o"></i></li>
-                                <li><i class= "fa fa-circle-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class= "col1">
-                            <p class = "lang">JavaScript</p>
-                        </div>
-                        <div class= "col2">
-                            <ul class = "five">
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle-o"></i></li>
-                                <li><i class= "fa fa-circle-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class= "col1">
-                            <p class = "lang">HTML</p>
-                        </div>
-                        <div class= "col2">
-                            <ul class = "five">
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class= "col1">
-                            <p class = "lang">CSS</p>
-                        </div>
-                        <div class= "col2">
-                            <ul class = "five">
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                                <li><i class= "fa fa-circle"></i></li>
-                            </ul>
-                        </div>
-                    </div>
+                        </div> -->
+                    </ul>
                     <h1 class="csHeading">Courses</h1>
-                    <ul class= "courses">
+                    <ul class= "cs">
                         <li>Program& Data Structure</li>
                         <li>Discrete Math</li>
                         <li>Programming Language for System</li>
                         <li>Data Structure& Algorithm</li>
                         <li>Introduction to Computer Organization</li>
-                        <li>Foudnations of Computer Science</li>
+                        <li>Foundations of Computer Science</li>
                         <li>Introduction to Computer Science</li>
                     </ul>
 
                 </div>
                 <div class = "col">
                     <h1 class = "csHeading">Projects</h1>
-                    <h2>Game Development- Stacker/ Space Invader</h2>
-                    <p class="description">Using Arduino LED board, 
-                        our team of four developed a game from scratch and also 
-                        recreated the arcade game, Space Invader</p>
-                    <h2>Website Development</h2>
-                    <p class="description">I built my porfolio website
-                        with the use of HTML, CSS, and JavaScript, showing
-                        my computer science experience and also my art pieces.</p>
+                    <ul class= "cs">
+                        <li><h2>Game Development- Stacker/ Space Invader</h2>
+                            <p class="description">Using Arduino LED board, 
+                                our team of four developed a game from scratch and also 
+                                recreated the arcade game- Space Invader.</p>
+                        </li>
+                        <li><h2>Website Development</h2>
+                        <p class="description">I built my porfolio website
+                            with the use of HTML, CSS, and JavaScript, showing
+                            my computer science experience/ projects and also my a lot of art pieces 
+                            I accomplished over the years.</p>
+                        </li>
+                        <li><h2>App</h2>
+                        <p class="description">In a group of three, we built an app called "TODO SNAP"
+                            for people to stay motivated during quarantine. It keeps track of events and tasks
+                            daily and plus you to take pictures of you finishing the task! It also gives
+                            you the opportunity to add another friend's calendar to look at their pictures and tasks.
+                            Frontend: Flutter. Backend: Java Servlets. </p>
+                        </li>
+                    </ul>
                 </div>
         </div>
       </div>

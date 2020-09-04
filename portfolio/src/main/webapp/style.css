@@ -236,6 +236,7 @@ ul.cs{
     width: auto;
     margin: 5% 5% 5% 15%;
     max-width: 750px;
+    padding-top: 30px;
 }
 #caption{
     display: initial;
@@ -247,6 +248,7 @@ ul.cs{
     font-family: 'Cutive Mono', monospace;
 }
 .close{
+    padding-top: 65px;
     display: block;
     position: absolute;
     top: 15px;
